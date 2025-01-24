@@ -23,19 +23,18 @@ app.get("/usuarios", async (req, res) => {
   res.status(200).json(users);
 });
 
-app.put("/usuarios/:id", async (req, res) => {
-  await prisma.user.update({
+app.put("usuarios/:id", async) (req,res) => {
+  await prisma.user.update({  
     where: {
       id: req.params.id,
     },
     data: {
       email: req.body.email,
       name: req.body.name,
-      age: req.body.age,
-    },
-  });
-  res.status(200).json(req.body);
-});
-
+      age: req.body.age
+    } 
+  
+  })
+}
 app.listen(3000);
 console.log("Server is running on port 3000");
