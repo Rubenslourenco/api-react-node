@@ -27,17 +27,11 @@ function Home() {
         <button type="button">Cadastro</button>
       </form>
       {users.map((user) => (
-        <div key={user.id} className="card">
+        <div key={user.id}>
           <div>
-            <p>
-              Nome: <span>{user.name} </span>
-            </p>
-            <p>
-              Idade: <span>{user.age}</span>
-            </p>
-            <p>
-              Email: <span>{user.email}</span>
-            </p>
+            <p>Nome: {user.name} </p>
+            <p>Idade: {user.age}</p>
+            <p>Email: {user.email}</p>
           </div>
 
           <button>
