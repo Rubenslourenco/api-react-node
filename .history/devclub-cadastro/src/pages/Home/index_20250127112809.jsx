@@ -10,10 +10,6 @@ function Home() {
     users = await api.get("/usuarios");
   }
 
-  useEffect(() => {
-    getUsers();
-  }, []);
-
   return (
     <div className="container">
       <form>
