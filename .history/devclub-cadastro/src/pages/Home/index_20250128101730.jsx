@@ -27,10 +27,7 @@ function Home() {
 
   async function deleteUsers(id) {
     await api.delete(`/usuarios/${id}`);
-
-    getUsers();
   }
-
   useEffect(() => {
     getUsers();
   }, []);
