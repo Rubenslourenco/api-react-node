@@ -4,12 +4,11 @@ import Trash from "../../assets/trash.svg";
 import api from "../../services/api";
 
 function Home() {
-  const [users, setUsers] = useState([]);
+  let users = [];
 
   async function getUsers() {
-    const usersFromApi = await api.get("/usuarios");
-
-    setUsers(usersFromApi.data);
+    users = await api.get("/usuarios");
+    console.log(users);
   }
 
   useEffect(() => {

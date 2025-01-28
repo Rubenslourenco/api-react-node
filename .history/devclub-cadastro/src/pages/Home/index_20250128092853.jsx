@@ -10,7 +10,7 @@ function Home() {
     const usersFromApi = await api.get("/usuarios");
 
     setUsers(usersFromApi.data);
-  }
+    
 
   useEffect(() => {
     getUsers();
