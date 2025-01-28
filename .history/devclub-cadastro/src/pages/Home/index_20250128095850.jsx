@@ -17,12 +17,7 @@ function Home() {
   }
 
   async function createUsers() {
-    await api.post("/usuarios", {
-      name: inputName.current.value,
-      age: inputAge.current.value,
-      email: inputEmail.current.value,
-    });
-    getUsers();
+    console.log(inputName.current.value);
   }
   useEffect(() => {
     getUsers();

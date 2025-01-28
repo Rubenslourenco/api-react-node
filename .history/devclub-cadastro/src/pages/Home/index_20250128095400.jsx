@@ -16,14 +16,6 @@ function Home() {
     setUsers(usersFromApi.data);
   }
 
-  async function createUsers() {
-    await api.post("/usuarios", {
-      name: inputName.current.value,
-      age: inputAge.current.value,
-      email: inputEmail.current.value,
-    });
-    getUsers();
-  }
   useEffect(() => {
     getUsers();
   }, []);
@@ -35,9 +27,7 @@ function Home() {
         <input placeholder="Nome" name="nome" type="text" ref={inputName} />
         <input placeholder="Idade" name="idade" type="number" ref={inputAge} />
         <input placeholder="Email" name="email" type="email" ref={inputEmail} />
-        <button type="button" onClick={createUsers}>
-          Cadastro
-        </button>
+        <button type="button">Cadastro</button>
       </form>
       {users.map((user) => (
         <div key={user.id} className="card">
